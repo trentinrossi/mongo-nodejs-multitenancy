@@ -17,12 +17,12 @@ class PersonRepository {
     return Person.findOne(conditions, projection, options).lean();
   }
 
-  create(respondent) {
-    return Person.create(respondent);
+  create(person) {
+    return Person.create(person);
   }
 
-  updateOne(email, respondent) {
-    return Person.updateOne({ email }, { $set: respondent });
+  updateOne(email, person) {
+    return Person.updateOne({ email }, { $set: person });
   }
 
   delete(email) {

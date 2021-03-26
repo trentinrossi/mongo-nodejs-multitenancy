@@ -19,12 +19,12 @@ class PersonService {
     return repository.findOne({ email });
   }
 
-  async insert(respondent) {
-    return repository.create(respondent);
+  async insert(person) {
+    return repository.create(person);
   }
 
-  async update(email, respondent) {
-    return repository.updateOne(email, respondent);
+  async update(email, person) {
+    return repository.updateOne(email, person);
   }
 
   async delete(email) {
